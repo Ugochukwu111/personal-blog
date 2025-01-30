@@ -1,0 +1,214 @@
+/* Reset margins, paddings, and box-sizing */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #FF0000;
+  --black: #000000;
+  --purple: #800080;
+  --pink: #FFC0CB;
+  --blue: #0000FF;
+  --white: #F1E1B3 ;
+}
+
+/* Background color utilities */
+.bg-red { background-color: var(--red); }
+.bg-black { background-color: var(--black); }
+.bg-purple { background-color: var(--purple); }
+.bg-pink { background-color: var(--pink); }
+.bg-blue { background-color: var(--blue); }
+
+/* Text color utilities */
+.text-red { color: var(--red); }
+.text-black { color: var(--black); }
+.text-purple { color: var(--purple); }
+.text-pink { color: var(--pink); }
+.text-blue { color: var(--blue); }
+
+
+/* Set smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improve typography */
+body {
+  padding: 3em 0;
+  display: grid;
+  place-items: center;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: var(--white);
+  font-size: 16px;
+  min-height: 100svh;
+  background-image: url(/images/personal-blog-bkg.jpg);
+  /* background: linear-gradient(45deg, var(--black), var(--red), var(--purple), var(--blue), var(--pink)); */
+ 
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: inherit;
+}
+
+/* Reset button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+a
+{
+
+}
+
+
+.block{
+  display: block;
+}
+
+/* Default container width */
+
+/* Flexbox Centering */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+.flex{
+  display: flex;
+}
+
+.grid-center{
+  display: grid;
+  place-items: center;
+}
+
+.fwb{
+  font-weight: 700;
+}
+
+/* Smooth transition */
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hide Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  width: 90%;
+  padding: 1em 1.5em;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  background: rgba(225, 225, 225, 0.2);
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+.socials{
+ width: 100%;
+}
+.social-icon-container{
+  width: 100%;
+}
+
+.social-link {
+  background-image: url('path-to-background-image.jpg'); /* Background image */
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+   border: 2px solid  var(--black);
+  transition: background-color 0.3s ease;
+   display: flex;
+   align-items: center;
+   color: var(--black);
+   margin-inline: .5em;
+   justify-content: center;
+   
+}
+
+.social-link:hover {
+  background-color: var(--white);
+  color: var(--red);
+  border: 2px solid var(--white); /* Glowing background color on hover */
+}
+
+.social-link svg {
+  width: 25px;
+  height: 25px;
+ /* Icon color */
+  transition: all 250ms  ease;
+}
+
+.social-link:hover svg {
+  fill: var(--white); /* Change icon color on hover */
+}
+
+
+main{
+  width: 38%;
+  overflow: hidden;
+}
+aside{
+  width: 55%; 
+  justify-content: space-evenly;
+}
+
+.pic-box{
+  width: 100%;
+  /* min-width: 20rem; */
+  aspect-ratio: 1 / .9 ;
+  border-radius: 1rem;
+  background-color:rgba(25, 20, 20, 0.413);
+ 
+ 
+  /* position: absolute; */
+  left: 0;
+  animation: moveRight 2s ease forwards;
+}
+
+@keyframes moveRight {
+  from {
+    right: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    right: 100%;
+    
+  }
+}
+
+@media(max-width: 48rem) {
+  .container{
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  main{
+    padding: .5em;
+    width: 100%;
+    max-width: 400PX;
+  }
+  aside{
+    width: 100%;
+    
+    align-items: center;
+  }
+}
