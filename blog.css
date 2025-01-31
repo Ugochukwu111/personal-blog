@@ -49,6 +49,19 @@ body {
  
 }
 
+h1{
+  font-size: 1.5rem;
+}
+
+.name-text{
+  font-size: clamp(1.8rem, 5vw, 2rem);
+}
+
+p{
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+}
+
 /* Make images responsive */
 img {
   max-width: 100%;
@@ -56,6 +69,7 @@ img {
   display: block;
   border-radius: inherit;
 }
+
 
 /* Reset button styles */
 button {
