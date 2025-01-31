@@ -64,10 +64,8 @@ button {
   cursor: pointer;
   font-family: inherit;
 }
-
-a
-{
-
+.text-end{
+  text-align: end;
 }
 
 
@@ -168,6 +166,7 @@ main{
 }
 aside{
   width: 55%; 
+  max-width: 500px;
   justify-content: space-evenly;
 }
 
